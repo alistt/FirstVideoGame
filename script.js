@@ -1,5 +1,5 @@
-const startButton= document.getElementById('start-btn')
-const nextButton= document.getElementById('next-btn')
+const startButton = document.getElementById('start-btn')
+const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById
 ('question-container')
 const questionElement = document.getElementById('question')
@@ -13,18 +13,24 @@ let shuffledQuestions, currentQuestionIndex
 startButton.addEventListener('click', startGame)
  
  function startGame(){
+     
  
+     startButton.classList.remove('hide')
      startButton.classList.add('hide')
      nextButton.classList.remove('hide')
+     
     //  shuffledQuestions = questions.sort(() => Math.random() - .5)
      currentQuestionIndex = 0
-     questionContainerElement.classList.remove('hide)')
+     questionContainerElement.classList.remove('hide')
      setNextQuestion()
+
  }
+
+
 
  function setNextQuestion() {
     if(currentQuestionIndex ==questionsList.length) {
-        alert("Congrats")
+        alert("Try Again")
         resetState()
         clearStatusClass()
     }
@@ -81,13 +87,15 @@ let questionsList = [
         answer: true
     },
     {
-        questionText: 'Did Airedale Terriers Serve?',
+        questionText: 'Airedales Are Primarily White',
         answer: false
     },
     {
-        questionText: 'Did Airedale Terrien The War?',
+        questionText: 'An Airedale Named Bob Received A Purple Victorian',
         answer: true
     },
+
+
 
 
 ]
